@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./images/favicon.ico"></head>    
+    <title>インターネットに基づく日本語の教育</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            width: 200px;
+            height: 200px;
+        }
+
+        .nav-li {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            display: block;
+            text-decoration: none;
+            /* color: #4c4c4c; */
+        }
+
+        .nav-li:hover {
+            animation: top-page__hover-global-nav 0.6s ease-out 0s forwards
+        }
+        
+        .nav-li:hover .label {
+            height: 40px;
+        }
+
+        @keyframes top-page__hover-global-nav {
+            0% {
+                transform: translateX(0)
+            }
+            60% {
+                transform: translateX(-30px)
+            }
+            80% {
+                transform: translateX(-25px)
+            }
+            100% {
+                transform: translateX(-30px)
+            }
+        }
+
+        .label {
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 180px;
+            height: 15px;
+            background-color: rgba(70, 70, 70, 0.1);
+            transition: all 0.3s ease 0s;
+        }
+
+        .triangle {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            border-left: solid 15px #666;
+            border-top: solid 10px transparent;
+            border-bottom: solid 10px transparent;
+        }
+
+        .text {
+            position: absolute;
+            top: 0;
+            left: 25px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 15px;
+            color: #666;
+        }
+
+        .frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            border: solid 3px #777;
+            border-radius: 3px;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-image: url('./images/bk_1.png');
+            background-size: cover;
+        }
+
+        .frame div {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+        }
+
+        .frame div::before,
+        .frame div::after {
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: #777;
+
+        }
+
+        .frame div:nth-child(1) {
+            top: 0;
+            left: 0;
+        }
+
+        .frame div:nth-child(1)::before {
+            width: 40px;
+            height: 20px;
+        }
+
+        .frame div:nth-child(1)::after {
+            width: 20px;
+            height: 40px;
+        }
+
+        .frame div:nth-child(2) {
+            top: 0;
+            right: 0;
+        }
+
+        .frame div:nth-child(2)::before {
+            width: 40px;
+            height: 20px;
+        }
+
+        .frame div:nth-child(2)::after {
+            right: 0;
+            width: 20px;
+            height: 40px;
+        }
+
+        .frame div:nth-child(3) {
+            bottom: 0;
+            left: 0;
+        }
+
+        .frame div:nth-child(3)::before {
+            bottom: 0;
+            width: 40px;
+            height: 20px;
+        }
+
+        .frame div:nth-child(3)::after {
+            width: 20px;
+            height: 40px;
+        }
+
+        .frame div:nth-child(4) {
+            bottom: 0;
+            right: 0;
+        }
+
+        .frame div:nth-child(4)::before {
+            bottom: 0;
+            width: 40px;
+            height: 20px;
+        }
+
+        .frame div:nth-child(4)::after {
+            right: 0;
+            width: 20px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="frame">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="nav">
+            <a class="nav-li" href="./charts/chart1.html" target="_blank">
+                <section>
+                    <div class="label"></div>
+                    <div class="triangle"></div>
+                    <p class="text">chart1</p>
+                </section>
+            </a>
+            <a class="nav-li" href="./charts/chart1.html" target="_blank">
+                <section>
+                    <div class="label"></div>
+                    <div class="triangle"></div>
+                    <p class="text">chart1</p>
+                </section>
+            </a>
+            <a class="nav-li" href="./charts/chart1.html" target="_blank">
+                <section>
+                    <div class="label"></div>
+                    <div class="triangle"></div>
+                    <p class="text">chart1</p>
+                </section>
+            </a>
+            <a class="nav-li" href="./charts/chart1.html" target="_blank">
+                <section>
+                    <div class="label"></div>
+                    <div class="triangle"></div>
+                    <p class="text">chart1</p>
+                </section>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>
