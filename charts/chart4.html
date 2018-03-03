@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="https://cdn.bootcss.com/echarts/4.0.3/echarts-en.js"></script>
+    <style>
+        #main {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%)
+        }
+    </style>
+</head>
+<body>
+    <div id="main" style="width: 100%;height:100%;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {
+            title: {
+              text: '选科推荐',
+              x: 'center',
+              y: 'center' 
+            },
+            tooltip: {
+              trigger: 'item',
+              formatter: '{b}'
+            },
+            legend: {
+              x: 'center',
+              y: 'bottom'
+            },
+            calculable: true,
+            series: [
+              {
+                color: ['#fe8eae', '#fea1cc', '#fca8e1', '#de9cfd', '#d0a8fc', '#fcba61', '#f5d978', '#f5ed78', '#c8f578', '#9df174', '#6fea8e', '#78f597', '#65db99', '#78f5af', '#7bebc3', '#78f5d7', '#78f4f5', '#78d6f5', '#78bff5', '#7899f5'],
+                type: 'pie',
+                radius: [60, 160],
+                center: ['50%', '50%'],
+                roseType: 'radius',
+                data: [
+                   {value: 76.3, name: '我是一个粉刷匠'},
+                   {value: 72.1, name: '物理/化学/生物：72.1'},
+                   {value: 60.7, name: '物理/化学/生物：60.7'},
+                   {value: 77.9, name: '物理/化学/生物：77.9'},
+                   {value: 70.3, name: '物理/化学/生物：70.3'},
+                   {value: 63, name: '物理/化学/生物：63'},
+                   {value: 52.7, name: '物理/化学/生物：52.7'},
+                   {value: 72.8, name: '物理/化学/生物：72.8'},
+                   {value: 71.3, name: '物理/化学/生物：71.3'},
+                   {value: 96.3, name: '物理/化学/生物：96.3'},
+                   {value: 80.1, name: '物理/化学/生物：80.1'},
+                   {value: 71.3, name: '物理/地理/生物：71.3'},
+                   {value: 92.1, name: '物理/化学/生物：92.1'},
+                   {value: 71.3, name: '物理/化学/地理：71.3'},
+                   {value: 71.9, name: '物理/地理/生物：71.9'},
+                   {value: 71.9, name: '物理/化学/生物：71.9'},
+                   {value: 62.2, name: '物理/化学/生物：62.2'},
+                   {value: 70.7, name: '物理/化学/生物：70.7'},
+                   {value: 89.3, name: '物理/化学/生物：89.3'},
+                   {value: 67.2, name: '物理/化学/生物：67.2'}
+                ]
+              }
+            ]
+          }
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
